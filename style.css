@@ -326,6 +326,34 @@ nav a:hover {
 
     font-size: 13px;
 }
+.hero-tags span {
+    border: 1px solid var(--border);
+    background: rgba(23, 31, 67, 0.6);
+    padding: 7px 15px;
+    border-radius: 25px;
+    color: var(--muted);
+    font-size: 13px;
+
+    display: inline-block;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ZOOM + GLOW */
+.hero-tags span:hover {
+    transform: scale(1.12);
+
+    border-color: var(--purple);
+
+    box-shadow:
+        0 0 8px rgba(198, 135, 239, 0.6),
+        0 0 18px rgba(198, 135, 239, 0.35),
+        0 0 30px rgba(198, 135, 239, 0.15);
+}
 
 
 /* =========================================================
@@ -454,6 +482,41 @@ nav a:hover {
 
     margin-top: 10px;
 }
+/* =========================================================
+   STATS CARD HOVER EFFECT
+========================================================= */
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+    transition: 
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Hover */
+.stat-card:hover {
+    border-color: var(--purple);
+
+    background: #1b254d;
+
+    box-shadow:
+        0 0 10px rgba(198, 135, 239, 0.25),
+        0 0 25px rgba(198, 135, 239, 0.15);
+}
+
+/* Number glow */
+.stat-card:hover strong {
+    text-shadow:
+        0 0 8px rgba(198, 135, 239, 0.7),
+        0 0 18px rgba(198, 135, 239, 0.4);
+}
+
+/* Label color */
+.stat-card:hover span {
+    color: #c687ef;
+}
 
 
 /* =========================================================
@@ -560,9 +623,11 @@ nav a:hover {
 }
 
 
-/* =========================================================
+
+
+/* =====================================================
    TECHNOLOGY PILLS
-========================================================= */
+===================================================== */
 
 .tech-pill {
     position: absolute;
@@ -581,25 +646,96 @@ nav a:hover {
 
     font-size: 11px;
 
+    font-weight: 500;
+
     z-index: 10;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+
+/* =====================================================
+   REACT
+===================================================== */
 
 .pill-react {
     top: 180px;
-
     right: 15px;
 }
+
+.pill-react:hover {
+
+     background: #336791;
+
+    color: #ffffff;
+
+    border-color: #4fa3d1;
+
+    transform: translateY(-6px) scale(1.08);
+
+    box-shadow:
+        0 0 10px rgba(97, 218, 251, 0.5),
+        0 0 25px rgba(97, 218, 251, 0.4),
+        0 0 45px rgba(97, 218, 251, 0.25);
+}
+
+
+/* =====================================================
+   SPRING BOOT
+===================================================== */
 
 .pill-node {
     bottom: 180px;
-
     left: 10px;
 }
 
+.pill-node:hover {
+
+     background: #336791;
+
+    color: #ffffff;
+
+    border-color: #4fa3d1;
+
+    transform: translateY(-6px) scale(1.08);
+
+    box-shadow:
+        0 0 10px rgba(109, 179, 63, 0.5),
+        0 0 25px rgba(109, 179, 63, 0.4),
+        0 0 45px rgba(109, 179, 63, 0.25);
+}
+
+
+/* =====================================================
+   POSTGRESQL
+===================================================== */
+
 .pill-db {
     bottom: 80px;
-
     right: 15px;
+}
+
+.pill-db:hover {
+
+    background: #336791;
+
+    color: #ffffff;
+
+    border-color: #4fa3d1;
+
+    transform: translateY(-6px) scale(1.08);
+
+    box-shadow:
+        0 0 10px rgba(51, 103, 145, 0.6),
+        0 0 25px rgba(51, 103, 145, 0.5),
+        0 0 45px rgba(51, 103, 145, 0.3);
 }
 
 
@@ -897,6 +1033,26 @@ nav a:hover {
 
 .secondary-small {
     border: 1px solid var(--border);
+}
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+/* Image Zoom */
+.project-image:hover img {
+    transform: scale(1.12);
 }
 
 
