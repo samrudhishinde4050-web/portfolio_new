@@ -1516,6 +1516,350 @@ nav a:hover {
     border-color: var(--purple);
 }
 
+/* =========================================================
+   CERTIFICATES
+========================================================= */
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+
+/* =====================================================
+   CERTIFICATES
+===================================================== */
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+
+/* =====================================================
+   CERTIFICATE CARD
+===================================================== */
+
+.certificate-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Card Hover */
+
+.certificate-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--purple);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   CERTIFICATE IMAGE
+===================================================== */
+
+.certificate-image {
+    height: 210px;
+
+    overflow: hidden;
+
+    background: #151a35;
+
+    position: relative;
+}
+
+
+/* Certificate Image */
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    /* Important for certificate */
+    object-position: top center;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* Image Zoom */
+
+.certificate-card:hover
+.certificate-image img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   CERTIFICATE CONTENT
+===================================================== */
+
+.certificate-content {
+    padding: 25px;
+}
+
+
+/* Title */
+
+.certificate-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+
+/* Certificate Heading */
+
+.certificate-title h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 21px;
+
+    line-height: 1.3;
+
+    margin: 0;
+
+    color: #ffffff;
+}
+
+
+/* Year */
+
+.certificate-title span {
+    color: var(--purple);
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* Organization / Role */
+
+.certificate-content h4 {
+    color: var(--purple);
+
+    margin: 10px 0 12px;
+
+    font-size: 16px;
+}
+
+
+/* Description */
+
+.certificate-content p {
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   VIEW CERTIFICATE LINK
+===================================================== */
+
+.view-certificate {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    border: 1px solid var(--purple);
+
+    background: transparent;
+
+    color: var(--purple);
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Eye Icon */
+
+.view-certificate i {
+    font-size: 13px;
+}
+
+
+/* Hover */
+
+.view-certificate:hover {
+    background: var(--purple);
+
+    color: #151127;
+
+    transform: scale(1.04);
+
+    box-shadow:
+        0 5px 20px rgba(198, 135, 239, 0.25);
+}
+
+
+/* =====================================================
+   CERTIFICATE LINK - REMOVE DEFAULT STYLE
+===================================================== */
+
+a.view-certificate {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Certificate image */
+
+    .certificate-image {
+        height: 230px;
+    }
+
+
+    .certificate-content {
+        padding: 22px;
+    }
+
+
+    .certificate-title h3 {
+        font-size: 19px;
+    }
+
+
+    .certificate-content h4 {
+        font-size: 15px;
+    }
+
+
+    .certificate-content p {
+        font-size: 14px;
+    }
+
+
+    .view-certificate {
+        padding: 9px 16px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .certificate-image {
+        height: 210px;
+    }
+
+
+    .certificate-content {
+        padding: 20px;
+    }
+
+
+    .certificate-title {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .certificate-title h3 {
+        font-size: 18px;
+    }
+
+
+    .certificate-title span {
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================================
+   AWARDS - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .award-image {
+        height: 220px;
+    }
+
+    .award-content {
+        padding: 25px;
+    }
+
+    .award-title h3 {
+        font-size: 22px;
+    }
+}
 
 /* =========================================================
    MOBILE
